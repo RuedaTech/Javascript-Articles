@@ -1,0 +1,160 @@
+
+# Javascripts Array Built-in Methods
+
+
+## Length    
+     This method will take an array as input and return its length.
+```
+let coins = ['dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny'];
+console.log(`The length of array coins is: ${coins.length}`);
+``` 
+ [See live code here](https://codepen.io/srueda/pen/eYzOzwe) 
+
+Now let us access an element of this array, using index position.
+
+**First Item**  ( ' dollar' )
+```
+let first = coins[0];
+console.log(`First element of coins: ${first}`);
+``` 
+**Last Item ** ( 'penny' )
+```
+let last = coins[coins.length - 1];
+console.log(`First element of coins: ${last}`);
+``` 
+
+
+## forEach
+This method allows you to loop thru the whole array
+visiting each element, and do whatever needs to be done
+each.
+```
+<!--  Iterate an array  -->
+console.log(" Index       Array Item");
+console.log("-------     ------------");
+coins.forEach( (item, index, array) => {
+    console.log( " ".repeat(6 - index.length) + index ,  " ".repeat(20 - item.length) + item);  
+}); 
+
+```
+## push()
+Push allows you to add an element to the end of the array
+
+```
+<!--  Add an Item to the end of array  -->
+  coins.push("fake coin-end");
+  console.log(`\nCoins: ${coins.join()}\n`);
+```
+*returns:  'dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny', '**fake coin-end**'*
+
+
+## unshift()
+Unshift allows you to add an element to the start of the array
+```
+<!--  Add an Item to the start of array  -->
+  coins.unshift("fake coin-start");
+  console.log(`\nCoins: ${coins.join()}\n`);
+```
+*returns:  '**fake coin-start**'  'dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny', 'fake coin-end'*
+
+
+## pop()
+Pop allows you to remove the last element from an array (end of array)
+```
+<!--  Remove an Item from the end of array  -->
+  coins.pop();
+  console.log(`\nCoins: ${coins.join()}\n`);
+```
+*returns:  '**fake coin-start**'  'dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny'*
+
+## shift()
+Shift allows you to remove and element from start of array
+```
+<!--  Remove an Item from the start of array  -->
+  coins.shift();
+  console.log(`\nCoins: ${coins.join()}\n`);
+```
+*returns:  'dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny'
+
+## indexOf()
+IndexOf allows you to find the current position of a given 'element' 
+within the array.              
+note:   (' dollar' is in position 0 within the array )
+```
+<!--  Find the numeric index of an item within the array  -->
+     let itemIndex = coins.indexOf('quarter');
+     console.log(`Item in Coins at index(${itemIndex}): ${coins[itemIndex]}`);
+```
+*Returns: Item in Coins at index(**2**): **quarter**
+
+## splice()
+This method allows you to remove elements from any position 
+within the array.
+```
+<!--  Remove an item from Coins, given an index position  -->
+<!--  Removes 1 or a range of elements from index position  -->
+     let idx = 2;
+     let itemsToRemove = 1
+     let newCoins = coins.splice(idx, itemsToRemove);    
+     console.log(`${newCoins}`);
+```
+*Returns:  dollar,half dollar,dime,nickel,penny    **(quarter is gone)***
+
+## Slice()
+Slice allows you to clone, copy one or more elements from a given array.
+```
+ <!-- Clone an array -->
+  let newArray = coins.slice();
+ console.log(newArray);
+```
+returns:  Array [ "dollar",  "half dollar", "dime", "nickel",  "penny"]
+```
+ <!-- copy a section of the array only -->
+ <!-- END position is not inclusive -->
+     coins = ['dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny'];
+     let start = 1;
+     let end   = 3;
+     let part1 = coins.slice(start, end);
+     console.log(part1);
+```
+Returns:   Array [ "half dollar",  "quarter"]
+
+```
+<!-- copy another section of the array only -->
+<!-- END position is not inclusive -->
+     let start = 2;
+     let end   = 5;
+     let part2 = coins.slice(2,5);
+     console.log(part2);
+```
+Returns: Array [ "quarter",  "dime",  "nickel"]
+
+## Join
+ This method <strong>Creates</strong> and <strong>returns</strong> a new string. It concatenates all elements in the given array
+
+```
+  <!--  Join coins array into an string comma separated  -->   
+    let coinsJoined = coins.join();
+    console.log(`Coins joined comma separated: ${coinsJoined}`);
+```
+returns: "Coins joined comma separated: dollar,half dollar,quarter,dime,nickel,penny"
+
+
+```
+  <!--  Join coins array into an string no spaces -->   
+     coinsJoined = coins.join('');
+     console.log(`Coins joined into one string : ${coinsJoined}`);
+```
+returns: "Coins joined into one string : dollarhalf dollarquarterdimenickelpenny"
+
+
+# Let's Connect
+
+ [Github](https://github.com/RuedaTech/Javascript-Articles) 
+
+#Next article will be:   Array Methods Continuation
+
+
+
+
+
