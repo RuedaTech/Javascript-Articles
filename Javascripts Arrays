@@ -1,0 +1,66 @@
+#Arrays always start at position 0.
+
+Define an array object that will hold elements of ONLY one datatype.
+I give examples for declaration and accessing the first and nth elements in the array, for both one and double dimension arrays.
+
+# One dimension array
+let numbersArray1D = [100, 200, 300, 50, 220, 400, 70, 500];
+
+# Accessing array elements
+let firstElement = numbersArray1D[0];
+let n = 4
+let nElement = numbersArray[n];
+
+# Two dimensions array
+let numbersArray2D = [[100, 200],[200, 300],[300, 400]];
+
+# # Accessing array elements
+let elementAtPos2_1 = numbersArray2D[2][1];
+let elementAtPos0_0 = numbersArray2D[0][0];
+
+# Displaying  element values
+console.log(`Value of numbersArray1d[0] =  ${ firstElement }`);
+console.log(`Value of numbersArray1D[n] = ${ nElement}`);
+console.log(`Value of numbersArray2D[2][1] = ${ elementAtPos2_1 }`);
+console.log(`Value of numbersArray2D[0][0] = ${ elementAtPos0_0 }`);
+
+
+Output:
+
+**-------------------------------------------------------------------------  **
+"Value of numbersArray1d[0] =  100"
+"Value of numbersArray1D[n] = 220"
+"Value of numbersArray2D[2][1] = 400"
+"Value of numbersArray2D[0][0] = 100"
+**-------------------------------------------------------------------------  **
+
+
+Array of Records
+
+example:
+let student = [
+      {firstName: "juan",      lastName: "Gonzalez",   Age:   20, Fees: 750.90},
+      {firstName: "carlos",   lastName: "Gomez",       Age:   30, Fees: 750.90}, 
+      {firstName: "maria",    lastName: "martinez",     Age:   40, Fees: 750.90},
+  ];
+<!-- Display age of carlos   -->
+ console.log(`Carlos Age: ${student[1].Age} `);
+ 
+<!-- Display last name of Maria   -->
+ console.log(`Maria last name: ${student[2].lastName}`);
+ 
+<!-- Total fees -->
+ console.log(`Total fees: ${ student[0].Fees + student[1].Fees + student[2].Fees}`);
+ 
+ 
+Output:
+
+**-------------------------------------------------------------------------  **
+"Carlos Age: 30 "
+"Maria last name: martinez"
+"Total fees: 1127.6999999999998"
+**-------------------------------------------------------------------------  **
+
+
+Codepen link: https://codepen.io/srueda/pen/WNwVyqV
+this text on the web: https://ruedatech.com/learning-javascripts-arrays
