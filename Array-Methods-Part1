@@ -1,9 +1,12 @@
 
 # Javascripts Array Built-in Methods
+In this article I will give you some of the most used methods of an array
+in javascripts. a short explanation and one or two examples.
 
 
 ## Length    
      This method will take an array as input and return its length.
+# example: 
 ```
 let coins = ['dollar', 'half dollar', 'quarter', 'dime', 'nickel', 'penny'];
 console.log(`The length of array coins is: ${coins.length}`);
@@ -150,11 +153,6 @@ returns: "Coins joined into one string : dollarhalf dollarquarterdimenickelpenny
 
 # Let's Connect
 
- [Github](https://github.com/RuedaTech/Javascript-Articles) 
+ [Array Methods Part1 ](https://github.com/RuedaTech/Javascript-Articles) 
 
 #Next article will be:   Array Methods Continuation
-
-
-
-
-
